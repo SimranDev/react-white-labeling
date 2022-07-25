@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
   const [subDomain] = useState<string>(window.location.hostname.split(".")[0]);
@@ -12,13 +11,18 @@ function App() {
 
   return (
     <div className="h-screen flex">
-      <div
-        className={`border-4 grid items-center justify-center h-min w-max m-auto p-4 text-center rounded-lg ${
-          themes[subDomain as keyof typeof themes]
-        }`}
-      >
-        <h1>White Labeling</h1>
-        <h6>based on sub domains</h6>
+      <div className="m-auto scale-150 grid gap-2">
+        <div
+          className={`border-4 p-4 text-center rounded-lg ${
+            themes[subDomain as keyof typeof themes]
+          }`}
+        >
+          <h1>White Labeling</h1>
+          <h6>based on sub domains</h6>
+        </div>
+        <code className="text-xs text-center">
+          Sub-domain: <b>{subDomain}</b>
+        </code>
       </div>
     </div>
   );
