@@ -22,3 +22,7 @@
     @apply text-xs;
   }
 }
+
+body {
+  @apply bg-stone-50;
+}

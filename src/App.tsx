@@ -12,18 +12,18 @@ function App() {
         className="m-auto scale-150 grid gap-2"
         style={{ color: `${bgColor}` }}
       >
-        <code className=" bg-gray-500 text-white text-xs p-1 rounded-md scale-75">
+        <code className="bg-gray-400 text-white text-xs px-2 py-1 rounded-md scale-75">
           Theme State : <br /> {JSON.stringify(theme)}
         </code>
         <div
-          className={`border-4 p-4 text-center rounded-lg`}
+          className="border-4 p-4 text-center rounded-md"
           style={{ borderColor: `${textColor}` }}
         >
           <h1>White Labeling</h1>
           <h6>based on sub domains</h6>
         </div>
-        <code className="text-xs text-center">
-          Sub-domain: <b>{subDomain}</b>
+        <code className="text-xs text-center scale-90">
+          sub-domain: <b>{subDomain}</b>
         </code>
       </div>
     </div>
