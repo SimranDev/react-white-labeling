@@ -21,7 +21,7 @@ const themes:Record<WhiteLabelClient, Theme> = {
     },
 }
 
-export const useTheme = () => {
+export const useTheme = (): Theme & {theme : Theme} => {
     const [subDomain] = useState<WhiteLabelClient>(window.location.hostname.split(".")[0] as WhiteLabelClient);
     const [theme, setTheme] = useState<Theme>(themes['tella']);
 
